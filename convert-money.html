@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+       <table>
+           <th>Amount</th>
+           <th>Fom currency</th>
+           <th>To currency</th>
+           <th></th>
+           <tr>
+               <td> <input type="text" name="Amount" id="OF">
+               <td> <select id="Form">
+                      <option value="VietNam">VND</option>
+                      <option value="USD">USD</option>
+           </select>
+               <td> <select id="To">
+               <option value="VietNam">VND</option>
+               <option value="USD">USD</option>
+                    </select>
+           </td>
+           <td>
+               <button onclick="Changemoney()">Convert</button>
+           </td>
+           </tr>
+           <td>
+           <p id="Result"> Result: </p>
+           <td/>
+       </table>
+  <script>
+      function Changemoney() {
+         let Amount= document.getElementById("OF").value;
+         let From= document.getElementById("Form").value;
+         let A1= parseInt(Amount);
+         if (From === "VietNam") { result= Amount/23000
+         } else { result= Amount*23000}
+         document.getElementById("Result").innerHTML=("Result:" +result)}
+  </script>
+</body>
+</html>
